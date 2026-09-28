@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keerthana V | ECE Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f8f7ff;
+            color: #191622;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+
+            width: 100%;
+            padding: 20px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(248,247,255,0.94);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid #e8e3f1;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: #17131f;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 27px;
+        }
+
+        .navbar nav a {
+            color: #666171;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: #7758ff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 92vh;
+            padding: 90px 8%;
+
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+
+            align-items: center;
+            gap: 70px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    #e9ddff,
+                    transparent 35%
+                );
+        }
+
+        .hero-small {
+            color: #7657ff;
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 86px);
+            line-height: 0.98;
+
+            letter-spacing: -4px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #7657ff;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #686272;
+            font-size: 17px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 14px 22px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: #7657ff;
+            color: white;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(118,87,255,0.25);
+        }
+
+        .button-outline {
+            background: white;
+            color: #25202f;
+
+            border: 1px solid #ded8e9;
+        }
+
+        .button-outline:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HERO CARD
+        ========================= */
+
+        .hero-card {
+            background: white;
+
+            border: 1px solid #e4deef;
+            border-radius: 30px;
+
+            padding: 45px 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 30px 80px rgba(52,40,90,0.10);
+        }
+
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .hero-image {
+            width: 250px;
+            height: 300px;
+
+            margin: 0 auto 22px;
+
+           
+
+            overflow: hidden;
+
+            border: 5px solid #eee8ff;
+
+            box-shadow:
+                0 10px 30px rgba(118,87,255,0.18);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+        }
+
+        .hero-card h3 {
+            font-size: 24px;
+        }
+
+        .hero-card p {
+            color: #777180;
+        }
+
+        .hero-line {
+            height: 1px;
+
+            background: #e9e4f2;
+
+            margin: 25px 0;
+        }
+
+        .hero-card small {
+            color: #7657ff;
+
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        .section {
+            padding: 110px 8%;
+        }
+
+        .heading {
+            margin-bottom: 55px;
+        }
+
+        .heading p {
+            color: #7657ff;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+        .heading h2 {
+            font-size: clamp(38px,5vw,58px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-container {
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 70px;
+        }
+
+        .about-text p {
+            color: #666170;
+
+            font-size: 16px;
+
+            margin-bottom: 20px;
+        }
+
+        .about-card {
+            background: white;
+
+            border: 1px solid #e4dfef;
+
+            border-radius: 22px;
+
+            padding: 25px;
+        }
+
+        .about-row {
+            display: flex;
+
+            align-items: center;
+
+            gap: 17px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid #eeeaf5;
+        }
+
+        .about-row:last-child {
+            border-bottom: none;
+        }
+
+        .about-row i {
+            width: 25px;
+
+            color: #7657ff;
+
+            font-size: 19px;
+        }
+
+        .about-row small {
+            display: block;
+
+            color: #898391;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+        }
+
+        .about-row strong {
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            margin-top: 70px;
+
+            border-top: 1px solid #ddd7ea;
+            border-bottom: 1px solid #ddd7ea;
+        }
+
+        .stat {
+            padding: 30px;
+
+            border-right: 1px solid #ddd7ea;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h3 {
+            color: #7657ff;
+
+            font-size: 38px;
+
+            margin-bottom: 4px;
+        }
+
+        .stat p {
+            color: #777180;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           DARK SECTION
+        ========================= */
+
+        .dark {
+            background: #171321;
+            color: white;
+        }
+
+        .dark .heading h2 {
+            color: white;
+        }
+
+        .dark .heading p {
+            color: #aa92ff;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: 25px 1fr;
+
+            gap: 25px;
+
+            padding-bottom: 55px;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: "";
+
+            position: absolute;
+
+            left: 6px;
+            top: 15px;
+
+            height: calc(100% - 15px);
+
+            width: 1px;
+
+            background: #514a5f;
+        }
+
+        .timeline-dot {
+            width: 13px;
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: #aa92ff;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .timeline-content span {
+            color: #aa92ff;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .timeline-content h3 {
+            font-size: 21px;
+
+            margin: 8px 0;
+        }
+
+        .timeline-content p {
+            color: #aaa4b4;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+
+            border: 1px solid #e3deed;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-6px);
+
+            border-color: #b7a7ff;
+
+            box-shadow:
+                0 15px 35px rgba(50,40,90,0.08);
+        }
+
+        .skill-icon {
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 12px;
+
+            background: #eee9ff;
+
+            color: #7657ff;
+
+            margin-bottom: 18px;
+        }
+
+        .skill h3 {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .skill p {
+            color: #777180;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================= */
+
+        .project-section {
+            background: #f1edff;
+        }
+
+        .project-box {
+            background: white;
+
+            border: 1px solid #ddd6ef;
+
+            border-radius: 30px;
+
+            padding: 55px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+        }
+
+        .project-number {
+            color: #7657ff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .project-info h2 {
+            font-size: clamp(32px,4vw,52px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin: 15px 0 25px;
+        }
+
+        .project-info p {
+            color: #67616f;
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* PROJECT TAGS */
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 25px;
+        }
+
+        .tags span {
+            background: #eee9ff;
+
+            color: #6750d7;
+
+            border-radius: 30px;
+
+            padding: 8px 13px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+
+        /* PROJECT FLOW */
+
+        .flow {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .flow-item {
+            display: grid;
+
+            grid-template-columns: 42px 1fr;
+
+            gap: 18px;
+
+            padding: 20px 0;
+
+            border-bottom: 1px solid #eeeaf4;
+        }
+
+        .flow-item:last-child {
+            border-bottom: none;
+        }
+
+        .flow-number {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            background: #7657ff;
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .flow-item p {
+            color: #625d6c;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CERTIFICATES
+        ========================= */
+
+        .certificates {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+        .certificate {
+            background: #1e1928;
+
+            border: 1px solid #3b3547;
+
+            border-radius: 20px;
+
+            padding: 30px;
+        }
+
+        .certificate-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 14px;
+
+            background: #302843;
+
+            color: #aa92ff;
+
+            margin-bottom: 22px;
+        }
+
+        .certificate h3 {
+            font-size: 17px;
+
+            margin-bottom: 12px;
+        }
+
+        .certificate p,
+        .certificate small {
+            display: block;
+
+            color: #aaa4b4;
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+        .certificate span {
+            color: #aa92ff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            padding: 130px 8%;
+
+            text-align: center;
+
+            background: #7657ff;
+
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .contact-title {
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            font-weight: 800;
+        }
+
+        .contact h2 {
+            font-size: clamp(40px,6vw,70px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            margin: 20px 0;
+        }
+
+        .contact h2 span {
+            color: #ded3ff;
+        }
+
+        .contact-text {
+            color: #e7e0ff;
+
+            font-size: 14px;
+
+            margin-bottom: 35px;
+        }
+
+        .email {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: white;
+
+            color: #7657ff;
+
+            padding: 14px 25px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #110d18;
+
+            color: #aaa4b4;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 11px;
+        }
+
+        footer a {
+            color: #aaa4b4;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:1000px) {
+
+            .hero,
+            .about-container,
+            .project-box {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .certificates {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media(max-width:650px) {
+
+            .navbar {
+                padding: 18px 5%;
+            }
+
+            .navbar nav {
+                display: none;
+            }
+
+            .hero,
+            .section {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -2px;
+            }
+
+            .hero-card {
+                padding: 35px 20px;
+            }
+
+            /* Mobile photo size */
+
+            .hero-image {
+                width: 125px;
+                height: 125px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #ddd7ea;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .project-box {
+                padding: 30px 22px;
+            }
+
+            .project-info h2 {
+                font-size: 34px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Keerthana V
+        </div>
+
+        <nav>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#devlopment">Devlopment</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <p class="hero-small">
+                Electronics & Communication Engineering
+            </p>
+
+            <h1>
+                Think.
+                <br>
+                Design.
+                <span>Inovate.</span>
+            </h1>
+
+            <p class="hero-description">
+                I'm Keerthana V, a B.E. ECE student exploring
+                embedded systems, IoT and light-based communication —
+                currently working on a Li-Fi vehicle safety system.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#project"
+                    class="button button-primary">
+                    View my project
+                </a>
+
+                <a href="#contact"
+                    class="button button-outline">
+                    Get in touch
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE CARD -->
+
+        <div class="hero-card">
+
+            <div class="hero-image">
+
+                <img src="pro.png"
+                    alt="Keerthana V">
+
+            </div>
+
+            <h3>
+                KEERTHANA V
+            </h3>
+
+            <p>
+                ECE Student
+            </p>
+
+            
+
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="section" id="about">
+
+        <div class="heading">
+
+            <p>
+                Get to know me
+            </p>
+
+            <h2>
+                About
+            </h2>
+
+        </div>
+
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <p>
+                    I'm a B.E. Electronics and Communication
+                    Engineering student at Vivekanandha College
+                    of Engineering for Women.
+                </p>
+
+                <p>
+                    I like working at the point where hardware
+                    meets intelligence — microcontrollers,
+                    sensors and communication links that solve
+                    real-world problems.
+                </p>
+
+                <p>
+                    My recent focus has been optical wireless
+                    communication and embedded design,
+                    alongside machine learning fundamentals.
+                </p>
+
+                <p>
+                    I'm looking for internships and projects
+                    that let me keep building practical systems.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-row">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <div>
+
+                        <small>
+                            Education
+                        </small>
+
+                        <strong>
+                            B.E. ECE
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-row">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div>
+
+                        <small>
+                            College
+                        </small>
+
+                        <strong>
+                            Vivekanandha College
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-row">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <div>
+
+                        <small>
+                            Focus
+                        </small>
+
+                        <strong>
+                            Embedded & IoT
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-row">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <div>
+
+                        <small>
+                            Interest
+                        </small>
+
+                        <strong>
+                            Li-Fi Communication
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h3>
+                    02
+                </h3>
+
+                <p>
+                    Internships & training programs completed
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>
+                    2026
+                </h3>
+
+                <p>
+                    Ideathon participant
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>
+                    ECE
+                </h3>
+
+                <p>
+                    Electronics & Communication Engineering
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
+
+    <section class="section dark" id="education">
+
+        <div class="heading">
+
+            <p>
+                Academic journey
+            </p>
+
+            <h2>
+                Education
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        B.E. Electronics & Communication Engineering
+                    </span>
+
+                    <h3>
+                        Vivekanandha College of Engineering for Women
+                    </h3>
+
+                    <p>
+                        Tiruchengode · Engineering
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        Embedded Systems — Industrial Internship
+                    </span>
+
+                    <h3>
+                        SAN Technovation Pvt Ltd
+                    </h3>
+
+                    <p>
+                        Embedded Systems Training
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        Machine Learning — Internship Training
+                    </span>
+
+                    <h3>
+                        Ether Infotech
+                    </h3>
+
+                    <p>
+                        Coimbatore
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section class="section" id="skills">
+
+        <div class="heading">
+
+            <p>
+                What I know
+            </p>
+
+            <h2>
+                Skills
+            </h2>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    C Programming
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Python Basics
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>
+                    Hardware
+                </h3>
+
+                <p>
+                    Embedded Systems
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-memory"></i>
+                </div>
+
+                <h3>
+                    Hardware
+                </h3>
+
+                <p>
+                    Microcontrollers
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    Li-Fi / Optical Communication
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    IoT Fundamentals
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+
+                <h3>
+                    Core
+                </h3>
+
+                <p>
+                    Digital Electronics
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <h3>
+                    Core
+                </h3>
+
+                <p>
+                    Analog Electronics
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>
+                    AI / ML
+                </h3>
+
+                <p>
+                    Machine Learning Basics
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-file-word"></i>
+                </div>
+
+                <h3>
+                    Tools
+                </h3>
+
+                <p>
+                    MS Word
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-file-excel"></i>
+                </div>
+
+                <h3>
+                    Tools
+                </h3>
+
+                <p>
+                    MS Excel
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-file-powerpoint"></i>
+                </div>
+
+                <h3>
+                    Tools
+                </h3>
+
+                <p>
+                    PowerPoint
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECT
+    ========================= -->
+
+    <section class="section project-section" id="project">
+
+        <div class="heading">
+
+            <p>
+                My work
+            </p>
+
+            <h2>
+                Featured Project
+            </h2>
+
+        </div>
+
+
+        <div class="project-box">
+
+            <div class="project-info">
+
+                <span class="project-number">
+                    01
+                </span>
+
+                <h2>
+                    Vehicle-to-Vehicle
+                    Communication Using
+                    Li-Fi Technology
+                </h2>
+
+                <p>
+                    A road-safety system where a vehicle's LED
+                    headlight sends real-time alerts such as
+                    sudden braking, obstacles and emergencies
+                    to the vehicle behind it using visible light.
+                </p>
+
+                <p>
+                    The following vehicle receives the signal
+                    through a photodiode and alerts the driver
+                    through a display.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Li-Fi
+                    </span>
+
+                    <span>
+                        Embedded Systems
+                    </span>
+
+                    <span>
+                        V2V Communication
+                    </span>
+
+                    <span>
+                        Road Safety
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="flow">
+
+                <div class="flow-item">
+
+                    <span class="flow-number">
+                        01
+                    </span>
+
+                    <p>
+                        Front vehicle detects sudden braking,
+                        an obstacle or emergency.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-item">
+
+                    <span class="flow-number">
+                        02
+                    </span>
+
+                    <p>
+                        LED transmitter sends the information
+                        through a Li-Fi light signal.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-item">
+
+                    <span class="flow-number">
+                        03
+                    </span>
+
+                    <p>
+                        Following vehicle's photodiode
+                        receives the signal.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-item">
+
+                    <span class="flow-number">
+                        04
+                    </span>
+
+                    <p>
+                        Microcontroller processes the signal
+                        and alerts the driver.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- =========================
+         DEVLOPMENT
+    ========================= -->
+
+     
+<section class="section" id="development">
+
+    <div class="heading">
+        <p>My Work</p>
+        <h2>Development</h2>
+    </div>
+
+    <!-- Your development content here -->
+
+        <!-- Website 1 -->
+        <div class="development-card">
+            <div class="development-icon">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <h3>Website Development</h3>
+
+            <p>
+                Designed and developed a responsive website using
+                HTML, CSS and JavaScript with a clean and user-friendly interface.
+            </p>
+
+            <a href="http://127.0.0.1:5500/ad/home.html" target="_blank">
+                View Website →
+            </a>
+        </div>
+
+
+        <!-- Website 2 -->
+        <div class="development-card">
+            <div class="development-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>Web Development Project</h3>
+
+            <p>
+                Developed a functional website with interactive elements
+                and a professional user interface using web technologies.
+            </p>
+
+            <a href="http://127.0.0.1:5500/WEB/home2.html" target="_blank">
+                View Website →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+         CERTIFICATES
+    ========================= -->
+
+    <section class="section dark" id="certificates">
+
+        <div class="heading">
+
+            <p>
+                Achievements
+            </p>
+
+            <h2>
+                Certificates
+            </h2>
+
+        </div>
+
+
+       
+
+<div class="certificate">
+    <div class="certificate-icon">
+        <i class="fa-solid fa-certificate"></i>
+    </div>
+
+    <h3>Embedded Systems Internship</h3>
+    <p>SAN Technovation Pvt Ltd</p>
+    <small>Embedded Systems Training</small>
+
+    <a href="san tech.jpeg" target="_blank" class="view-certificate">
+        View Certificate
+    </a>
+</div>
+
+<div class="certificate">
+    <div class="certificate-icon">
+        <i class="fa-solid fa-award"></i>
+    </div>
+
+    <h3>Ideathon</h3>
+    <p>Engineering Confluence</p>
+    <small>Ideathon Participant</small>
+
+    <a href="karpagam.jpeg" target="_blank" class="view-certificate">
+        View Certificate
+    </a>
+</div>
+
+<div class="certificate">
+    <div class="certificate-icon">
+        <i class="fa-solid fa-brain"></i>
+    </div>
+
+    <h3>Machine Learning Internship</h3>
+    <p>Ether Infotech</p>
+    <small>Machine Learning Training</small>
+
+    <a href="ether.jpeg" target="_blank" class="view-certificate">
+        View Certificate
+    </a>
+</div>
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-content">
+
+            <p class="contact-title">
+                Get in touch
+            </p>
+
+            <h2>
+                Let's build something
+                <span>meaningful.</span>
+            </h2>
+
+            <p class="contact-text">
+                I'm open to internship opportunities,
+                industry projects and learning collaborations
+                in embedded systems, IoT and communication technologies.
+            </p>
+
+            <a href="mailto:yourmail@gmail.com"
+                class="email">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email me
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Keerthana V. All rights reserved.
+        </p>
+
+        <a href="#home">
+            Back to top ↑
+        </a>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(function(link) {
+
+                link.addEventListener("click", function(event) {
+
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
+
+                    if (target) {
+
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                });
+
+            });
+
+
+        window.addEventListener("scroll", function() {
+
+            const navbar =
+                document.querySelector(".navbar");
+
+            if (window.scrollY > 50) {
+
+                navbar.style.boxShadow =
+                    "0 8px 30px rgba(30,20,60,0.08)";
+
+            } else {
+
+                navbar.style.boxShadow = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
